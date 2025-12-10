@@ -1,6 +1,6 @@
 {
   "name": "NUS Sparks: Your NUS Onboarding Guide",
-  "description": "Your essential companion for navigating academic life at NUS. Get specific and terse flashcards and quizzes on NUS programs, policies, and student life to help you succeed as a freshman. Powered by Gemini API.",
+  "description": "Your essential AI companion for NUS. Features Multimodal Flashcards, Context-Aware Chat, and GPA Strategy powered exclusively by Google's Gemini 3 Pro.",
   "requestFramePermissions": [],
   "prompt": ""
 }
