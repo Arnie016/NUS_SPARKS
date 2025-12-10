@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUS Sparks: Your NUS Onboarding Guide</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+    }
+  }
+  </script>
+  <!-- Add Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+        <div class="header-title-group">
+            <div class="logo-placeholder animated-title">NUS Sparks 🎓</div>
+            <h1>NUS Sparks: Your NUS Onboarding Guide</h1>
+        </div>
+        <div class="header-buttons">
+            <a href="https://www.facebook.com/nus.singapore" target="_blank" rel="noopener noreferrer" id="facebookNusButton" class="button-like-label facebook-button" title="Visit the official NUS Facebook page"><i class="fab fa-facebook"></i> NUS Facebook</a>
+            <a href="https://t.me/NUSConfessIT/22635" target="_blank" rel="noopener noreferrer" id="confessitButton" class="button-like-label" title="Join the NUS Confessit Telegram group"><i class="fab fa-telegram-plane"></i> NUS Confessit <span class="new-tag">*NEW*</span></a>
+            <a href="https://www.reddit.com/r/nus/" target="_blank" rel="noopener noreferrer" id="redditNusButton" class="button-like-label reddit-button" title="Visit the NUS Subreddit"><i class="fab fa-reddit-alien"></i> r/NUS</a>
+            <a href="https://www.reddit.com/r/SGExams/" target="_blank" rel="noopener noreferrer" id="redditSgExamsButton" class="button-like-label reddit-button" title="Visit the SGExams Subreddit"><i class="fab fa-reddit-alien"></i> r/SGExams</a>
+            <a href="https://buy.stripe.com/dRm5kDfvo2eieQ56468EM02" target="_blank" rel="noopener noreferrer" id="supportProjectButton" class="button-like-label" title="Support this project"><i class="fas fa-heart"></i> Support Project</a>
+        </div>
+    </header>
+    <div id="currentTopicHeader"></div> <!-- Added for current topic display -->
+    <div class="global-actions">
+        <button id="goBackButton" class="secondary-button" title="Go back to your previous view" style="display: none;"><i class="fas fa-arrow-left"></i> Go Back</button>
+        <button id="startNewTopicButton" class="secondary-button" title="Start a new study session with a fresh topic"><i class="fas fa-plus-circle"></i> New Topic</button>
+        <button id="viewNavigatorButton" class="secondary-button" title="Ask the NUS Navigator chatbot"><i class="fas fa-robot"></i> NUS Navigator</button>
+        <button id="viewHistoryButton" class="secondary-button" title="View your past quiz sessions"><i class="fas fa-history"></i> History</button>
+        <button id="viewNotesButton" class="secondary-button" title="View and manage your saved notes"><i class="fas fa-book-open"></i> My Notes</button>
+        <button id="viewExchangePlannerButton" class="secondary-button" title="Plan your student exchange courses"><i class="fas fa-plane-departure"></i> Exchange Planner</button>
+        <button id="viewGpaCalculatorButton" class="secondary-button" title="Calculate your GPA/CAP"><i class="fas fa-calculator"></i> GPA Calculator</button>
+        <button id="viewResourcesButton" class="secondary-button" title="View helpful NUS resources and links"><i class="fas fa-atlas"></i> NUS Resources</button>
+        <button id="viewAchievementsButton" class="secondary-button" title="View your achievements and badges"><i class="fas fa-trophy"></i> My Achievements</button>
+    </div>
+    <p id="appDescription">
+      Welcome to NUS Sparks! Your essential guide to navigating student life at NUS. Enter an NUS-related topic, or <strong>upload a photo of your lecture slides</strong> to instantly generate flashcards using Gemini 3 Pro.
+    </p>
+    <div id="inputSection">
+      <textarea
+        id="topicInput"
+        placeholder="Enter topic (e.g., Ancient Rome) or 'Term: Definition' pairs..."
+        aria-label="Topic or terms and definitions input"
+      ></textarea>
+      
+      <!-- New Multimodal Input -->
+      <div style="margin-bottom: 15px; text-align: left;">
+          <label for="topicImageInput" class="button-like-label secondary-button" style="width: auto; display: inline-flex;">
+              <i class="fas fa-camera"></i> Snap & Study (Upload Slide/Notes)
+          </label>
+          <input type="file" id="topicImageInput" accept="image/*" style="display: none;">
+          <span id="topicImageFileName" style="color: var(--text-secondary-color); margin-left: 10px; font-size: 0.9em;"></span>
+      </div>
+
+      <div id="topicIdeasInteractiveSection">
+        <label id="topicIdeasLabel" for="topicInput">💡 Spark Your Study! (Tap an idea or type your own)</label>
+        <div id="topicSuggestionsRenderArea" class="topic-suggestions-list" aria-live="polite">
+            <!-- Topic suggestions will be injected here by JS -->
+        </div>
+        <button id="refreshTopicIdeasButton" class="secondary-button small-button" title="Get a new set of topic ideas"><i class="fas fa-sync-alt"></i> More Ideas</button>
+      </div>
+      <button id="generateButton" title="Generate flashcards and quiz for the current topic">Generate Flashcards</button>
+      
+      <div id="nusCoursesSectionContainer">
+        <h2 class="nus-courses-title"><i class="fas fa-graduation-cap"></i> NUS COURSE NOTES AND CHEATSHEETS: NOTEBOOKLM ENHANCED</h2>
+        <div class="course-search-container">
+            <i class="fas fa-search"></i>
+            <input type="search" id="nusCourseSearchInput" placeholder="Search course notes by code or name..." aria-label="Search NUS course notes">
+        </div>
+        <div id="nusCoursesRenderArea" class="nus-courses-list">
+            <!-- NUS course cards will be injected here by JS -->
+        </div>
+      </div>
+    </div>
+
+    <div id="flashcardGenerationAnimationContainer" style="display: none;">
+        <div class="flashcard-gen-animation">
+            <i class="fas fa-lightbulb idea-icon"></i>
+            <i class="fas fa-layer-group card-stack-icon"></i>
+        </div>
+        <p id="flashcardGenStatusText">Crafting your NUS insights...</p>
+    </div>
+
+    <div id="statusMessage" class="status-message" aria-live="polite">
+      <!-- Error messages or loading spinner will appear here -->
+    </div>
+
+     <div id="quizGenerationAnimationContainer" style="display: none;">
+        <div class="quiz-gen-animation">
+            <i class="fas fa-book-open book-icon book-left"></i>
+            <i class="fas fa-graduation-cap cap-icon"></i>
+            <i class="fas fa-book-open book-icon book-right"></i>
+        </div>
+        <p id="quizGenStatusText">Brewing your NUS quiz...</p>
+    </div>
+
+    <div id="contentArea">
+        <div id="exchangePlannerContainer" style="display: none;">
+            <!-- Exchange planner content will be rendered here -->
+        </div>
+        <div id="navigatorContainer" style="display: none;">
+            <div id="navigatorMessages" aria-live="polite">
+                <!-- Chat messages will be appended here -->
+            </div>
+            <div id="navigatorThinkingIndicator" style="display: none;" aria-live="assertive" aria-atomic="true">
+                <div class="typing-dots"><span></span><span></span><span></span></div>
+                <span>NUS Navigator is typing...</span>
+            </div>
+            <form id="navigatorForm" aria-label="Chat with NUS Navigator">
+                <textarea id="navigatorInput" placeholder="Ask anything about NUS..." required aria-label="Your message to NUS Navigator"></textarea>
+                <button type="submit" id="navigatorSendButton" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+        <div id="slideshowControls" class="slideshow-controls" style="display: none;">
+          <button id="prevButton" aria-label="Previous card" title="Previous card"><i class="fas fa-chevron-left"></i></button>
+          <button id="playPauseButton" aria-label="Play slideshow" data-playing="false" title="Play slideshow"><i class="fas fa-play"></i></button>
+          <button id="stopButton" aria-label="Stop slideshow" title="Stop slideshow"><i class="fas fa-stop"></i></button>
+          <button id="nextButton" aria-label="Next card" title="Next card"><i class="fas fa-chevron-right"></i></button>
+          <div id="slideCounter" class="slide-counter" aria-live="polite"></div>
+        </div>
+
+        <div id="flashcardDisplayArea">
+            <div id="flashcardsContainer" class="flashcards-container">
+              <!-- Flashcards or slideshow will be generated here -->
+            </div>
+            <div id="flashcardActionsContainer" style="display: none; margin-top: 15px; text-align: center;">
+                 <div id="flashcardImageUploadControls" style="display: inline-block; margin-right: 10px;">
+                    <label for="flashcardImageUpload" class="button-like-label secondary-button small-button" title="Upload a custom image for this flashcard"><i class="fas fa-image"></i> Upload Image</label>
+                    <input type="file" id="flashcardImageUpload" accept="image/*" style="display: none;">
+                </div>
+                <button id="saveFlashcardToNotesButton" class="secondary-button small-button" title="Save this flashcard to your notes"><i class="fas fa-clipboard"></i> Save to Notes</button>
+                <button id="expandDefinitionButton" class="secondary-button small-button" title="Get more details about this definition"><i class="fas fa-expand-arrows-alt"></i> Tell me more</button>
+                <button id="summarizeDefinitionButton" class="secondary-button small-button" title="Summarize this definition"><i class="fas fa-compress-arrows-alt"></i> Summarize</button>
+            </div>
+        </div>
+
+
+        <div id="quizContainer" class="quiz-container" style="display: none;">
+            <h2 id="quizTitle">Quiz Time!</h2>
+            <div id="quizProgressContainer" class="quiz-progress-container">
+                <div id="quizProgressBar" class="quiz-progress-bar"></div>
+            </div>
+            <div id="quizProgressCounter" class="quiz-progress-text-counter"></div>
+            <div id="quizQuestionArea">
+                <!-- Quiz questions will be injected here -->
+            </div>
+            <div id="quizNavigation" class="quiz-navigation-controls">
+                <button id="prevQuizQuestionButton" title="Go to the previous question">Previous Question</button>
+                <button id="nextQuizQuestionButton" title="Go to the next question (after answering)">Next Question</button>
+            </div>
+            <button id="submitQuizButton" style="display:none;" title="Submit your quiz answers and see results">Submit Quiz</button>
+        </div>
+
+        <div id="quizResultsContainer" class="quiz-results-container" style="display: none;">
+            <!-- Quiz results will be shown here -->
+        </div>
+
+        <div id="historyContainer" class="history-container" style="display: none;">
+            <h2><i class="fas fa-history"></i> Quiz History</h2>
+            <div id="historyTableContainer"></div>
+            <!-- Clear History Button removed from here -->
+        </div>
+
+        <div id="quizReviewDetailsContainer" style="display: none;">
+             <!-- Quiz review details will be generated here by JS -->
+        </div>
+
+        <div id="notesContainer" class="notes-container" style="display: none;">
+            <h2><i class="fas fa-book-open"></i> My Notes</h2>
+            <div id="addCustomNoteSection">
+                <textarea id="customNoteInput" placeholder="Type your custom note here..."></textarea>
+                <button id="addCustomNoteButton"><i class="fas fa-plus"></i> Add Custom Note</button>
+            </div>
+            <div id="notesDisplayArea">
+                <!-- Saved notes will be displayed here -->
+            </div>
+        </div>
+
+        <div id="resourcesContainer" class="resources-container" style="display: none;">
+            <h2><i class="fas fa-atlas"></i> Helpful NUS Resources</h2>
+            <div class="resource-search-container">
+                <input type="search" id="resourceSearchInput" placeholder="Search NUS resources..." aria-label="Search NUS resources">
+            </div>
+            <div id="resourceCategoryTabs">
+                <!-- Category tabs will be injected here by JS -->
+            </div>
+            <div id="resourcesDisplayArea" class="resources-list">
+                <!-- Resource links will be displayed here -->
+            </div>
+        </div>
+
+        <div id="achievementsContainer" class="achievements-container" style="display: none;">
+            <!-- Achievements timeline will be rendered here -->
+        </div>
+
+        <div id="gpaCalculatorContainer" class="gpa-calculator-container" style="display: none;">
+            <h2><i class="fas fa-calculator"></i> Interactive CAP/GPA Calculator</h2>
+            <div class="gpa-grid">
+                <div class="gpa-left-panel">
+                    <div class="gpa-card gpa-add-module-form">
+                        <h3><i class="fas fa-plus-circle"></i> Add Your Modules</h3>
+                        <form id="gpaBulkAddForm">
+                            <div class="gpa-module-input-header">
+                                <span>Module Code (Optional)</span>
+                                <span>MCs</span>
+                                <span>Grade</span>
+                            </div>
+                            <div id="gpaModuleInputContainer">
+                                <!-- Module input rows will be injected here -->
+                            </div>
+                            <div class="gpa-form-actions">
+                                <button type="button" id="addGpaRowButton" class="secondary-button small-button"><i class="fas fa-plus"></i> Add Row</button>
+                                <button type="submit" id="calculateCapFromFormButton"><i class="fas fa-magic"></i> Calculate CAP</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="gpa-right-panel">
+                    <div class="gpa-card gpa-results-display">
+                        <div class="gpa-result-item">
+                            <span class="gpa-result-label">Your CAP (with S/U)</span>
+                            <span id="gpaResultCap" class="gpa-result-value">0.000</span>
+                        </div>
+                        <div class="gpa-result-item">
+                            <span class="gpa-result-label">MCs Counted</span>
+                            <span id="gpaResultCountedMcs" class="gpa-result-value">0</span>
+                        </div>
+                         <div class="gpa-result-item hypothetical">
+                            <span class="gpa-result-label">Hypothetical CAP (no S/U)</span>
+                            <span id="gpaResultHypotheticalCap" class="gpa-result-value">0.000</span>
+                        </div>
+                        <div class="gpa-result-item hypothetical">
+                            <span class="gpa-result-label">Total MCs Taken</span>
+                            <span id="gpaResultTotalMcs" class="gpa-result-value">0</span>
+                        </div>
+                    </div>
+                     <div id="gpaCalculationFormula" class="gpa-card">
+                        <!-- Real-time formula display will be injected here -->
+                    </div>
+                    <div id="gpaModuleList" class="gpa-module-list">
+                        <!-- Module items will be dynamically added here -->
+                    </div>
+                    <!-- New AI Advisor Button -->
+                    <button id="gpaAiAdviceButton" class="secondary-button" style="width: 100%; margin-top: 15px; border-color: var(--primary-color);">
+                        <i class="fas fa-brain"></i> Ask Gemini: S/U Strategy Advisor
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <footer>
+      Powered by Gemini 3 Pro | Created by Arnav Salkade - <a href="https://www.linkedin.com/in/arnav-salkade-27076a20/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </footer>
+  </div>
+  <div id="achievementNotification" class="achievement-notification">
+      <!-- Notification content will be injected here -->
+  </div>
+
+  <template id="gpaModuleRowTemplate">
+    <div class="gpa-module-input-row">
+        <input type="text" class="gpa-module-code-input" placeholder="e.g., CS2030S">
+        <input type="number" class="gpa-module-mcs-input" placeholder="4" min="0" max="20">
+        <select class="gpa-module-grade-select">
+            <option value="" disabled selected>Grade</option>
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+            <option value="S">S (Satisfactory)</option>
+            <option value="U">U (Unsatisfactory)</option>
+        </select>
+    </div>
+  </template>
+
+  <audio id="correctSound" src="https://actions.google.com/sounds/v1/positive/positive_bells.ogg" preload="auto"></audio>
+  <audio id="incorrectSound" src="https://actions.google.com/sounds/v1/negative/negative_sfx.ogg" preload="auto"></audio>
+  
+  <!-- PDF Generation Libraries -->
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+  <script src="https://unpkg.com/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.js"></script>
+  
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>

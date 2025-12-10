@@ -1,0 +1,149 @@
+
+Based on the previous research on NUS Overseas Colleges (NOC), common freshman questions, and general NUS information, here are additional crucial details highly relevant to **everyone** in NUS, regardless of their year of study or program.
+
+This section covers vital aspects like IT services, advanced academic planning, research opportunities, broader financial matters, and leveraging the alumni network.
+
+---
+
+### Additional Comprehensive Guide for All NUS Students
+
+This section builds upon the previous reports, addressing essential areas pertinent to all students throughout their NUS journey.
+
+---
+
+### 6. Technology & IT Services
+
+NUS provides a comprehensive suite of IT services and resources essential for academic work, communication, and daily campus life.
+
+* **NUS-ID & Account Management:** Your NUS-ID is your primary login for almost all university systems (NUSmail, Canvas, EduRec, NUSMods, Wi-Fi).
+    * *IT Care Portal:* The central hub for IT support, password resets, 2FA registration, and reporting security incidents. It features an AI-powered chatbot, ALCA X, for instant support.
+        * **Link:** `https://nusit.nus.edu.sg/itcare/`
+* **NUSmail (Student Email):** Your official NUS email account, powered by Microsoft Office 365 Outlook.
+    * *Format:* `userID@u.nus.edu`
+    * *Access:* Via web (outlook.office365.com) or configure on mobile devices/desktop clients.
+        * **Link (MobileMail Setup Guide):** `https://nusit.nus.edu.sg/support/eguides/nusmail-eguides/mobilemail-2/`
+* **NUS Wi-Fi:** Seamless campus-wide Wi-Fi connectivity (e.g., NUS_STU network). IT Care provides guides for troubleshooting connectivity issues.
+* **Software Access:** NUS provides licenses for essential and specialized software at no cost to students.
+    * **Common Software:** Microsoft Office 365 (Word, Excel, PowerPoint, Outlook, OneDrive), EndNote, Reference Manager.
+    * **Specialized Software:** Many faculties/departments provide access to software like MATLAB, Mathematica, OriginPro, SPSS, Stata, Adobe Creative Cloud, ArcGIS, Python, RStudio, and more for academic use.
+    * *How to Get:* Search for the software name in the nTouch portal (accessible via IT Care) or through your faculty's IT resources.
+        * **Link (Software for Student):** `https://nusit.nus.edu.sg/services/software_and_os/software/software-for-student/`
+* **Learning & Collaboration Tools:**
+    * **Canvas:** The primary Learning Management System (LMS) for course materials, assignments, and announcements.
+    * **Zoom/Microsoft Teams:** For online lectures, tutorials, and group collaborations.
+    * **Panopto:** Integrated with Canvas for lecture recordings and media project uploads.
+    * **Plagiarism Prevention:** Tools like Turnitin are integrated into Canvas.
+* **Printing & Photocopying Services:** Self-service printing and photocopying machines are available across campus, notably in libraries and computer labs.
+    * *Payment:* Typically via NETS Flash Pay, EZ-Link Card, or PayNow QR.
+    * *Rates:* e.g., A4 Black & White Printing at $0.04, Colour at $0.40.
+    * *Locations:* Various libraries (Central Library, C J Koh Law Library, Medicine+Science Library), computer rooms (e.g., AS8, SoC LT 19), and some halls/residences.
+        * **Link (Printing Locations & Rates):** `https://libfaq.nus.edu.sg/faq/71360`
+
+---
+
+### 7. Advanced Academic Planning & Research Opportunities
+
+Beyond basic module registration, students can strategically plan their academic path for specialized goals and engage in significant research.
+
+* **Module Planning for Special Programmes (e.g., Double Major/Minor):**
+    * **Double Major:** A single degree program fulfilling requirements of two Majors. Requires additional modular credits (e.g., at least 40-48 units, depending on admission year). Up to 16 units can typically be double-counted towards both majors or other requirements (e.g., General Education, College, Minor). At least 16 units must be at Level 3000 or above.
+    * **Strategy:** Start by identifying core modules and prerequisites for both majors. Use NUSMods to plan your curriculum flow, check module reviews, and visualize your timetable. Consult your faculty's academic advisors for personalized planning.
+    * *Admission:* Can be admitted directly upon entry or apply to relevant faculties/schools by the end of your fifth semester.
+        * **Link (Double Major Programmes):** `https://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/special-programmes/double-major-programmes`
+* **Undergraduate Research Opportunities:** NUS actively encourages undergraduate involvement in research, offering structured programs and mentorship.
+    * **Undergraduate Research Opportunities Programme (UROP/UROPS):** Formally involves students in research activities under faculty supervision, earning course credits (e.g., 4 units towards Unrestricted Electives). Students work on existing projects within a research group.
+        * **Link (UROP Multiverse):** `https://www.nus.edu.sg/undergraduate-research/nusurop/urop-across-faculties/`
+    * **Research Experience Programme (REx):** An optional enhancement for UROP/UROPS modules (initially in CHS, expanding). REx Fellows can receive a research grant (up to $2,500) and are expected to submit a short research grant proposal.
+        * **Link (What is REx?):** `https://www.nus.edu.sg/undergraduate-research/nusurop/what-is-rex/`
+    * **Overseas Summer UROPS/URAPS:** Opportunities to conduct research at overseas universities during the May-August break (e.g., University of Cambridge, University of Toronto). Tuition fees are generally waived, but students cover living costs (financial aid may be available).
+        * **Link (Research Opportunities in Chemistry, examples):** `https://acsnus.wixsite.com/nusacssc/research-opportunities`
+    * **Other Opportunities:** A\*STAR internships, Global Research Immersion Programme, NUS Environmental Research Institute.
+
+---
+
+### 8. Financial Matters & Broader Support
+
+Beyond specific financial aid for needy students, NUS addresses general tuition fees, scholarships for continuing students, and various payment options.
+
+* **Tuition Fees:** Information on tuition fees for Singapore Citizens, Permanent Residents, and International Students is available on the NUS Office of Admissions website.
+* **Payment Methods:**
+    * **E-Payment:** Via PayNow QR, Convera, Credit Card, Debit Card, AliPay (through Education Records System or NUSFastPay).
+    * **Local Electronic Funds Transfer:** For alumni or non-matriculated students.
+    * **Telegraphic Transfer (TT):** For international payments.
+        * **Link (Student Finance Matters):** `https://www.nus.edu.sg/finance/students/student-finance-matters.html`
+* **Scholarships for Current Undergraduates:** NUS offers various scholarships for continuing students based on academic merit, leadership qualities, CCA involvement, and specific criteria.
+    * **NUS-Administered Scholarships:** Examples include NUS Global Merit Scholarship, NUS Merit Scholarship, NUS AI Talent Scholarship, NUS Sports Scholarship, NUS Performing & Visual Arts Scholarship, Stephen Riady Young Entrepreneur Scholarship.
+    * **Eligibility:** Typically requires a GPA of at least 4.0 or B+ grade average. International students not on MOE Tuition Grant may not be eligible for some schemes.
+    * **Application:** Freshmen are often considered during admission. Current students apply through specific scholarship calls or portals.
+    * **Externally-Administered Scholarships:** NUS also highlights various external scholarships (e.g., BCA, CIMB ASEAN, GIC, PSC, SG Digital Scholarship) from government agencies, statutory boards, and private organizations.
+        * **Link (Scholarships for Current NUS Undergraduates):** `https://www.nus.edu.sg/oam/scholarships/scholarships-for-current-nus-undergraduates`
+* **Bursaries & Loans (beyond freshman financial aid):** NUS provides various bursaries and loans (e.g., Residential Programme Bursaries, NUS Student Assistance Loan) to support students with demonstrated financial need throughout their candidature.
+
+---
+
+### 9. Alumni Network & Lifelong Learning
+
+NUS strongly supports its graduates through a robust alumni network and lifelong learning initiatives, benefiting current students through mentorship and future opportunities.
+
+* **NUS Lifelong Learning (L³ for Alumni):** An initiative supporting personal and professional growth for alumni, keeping them relevant to the future economy.
+    * **Courses:** Access to a catalog of over 1000 courses, including complimentary access to "AI for Everyone (AI4E)".
+    * **Alumni eVoucher:** All NUS alumni receive an eVoucher for one full-fee, non-SSG funded modular course.
+    * **Tuition Fee Rebate:** 20% tuition fee rebate on selected Master's Degrees (Coursework) for alumni (enhanced rebate for SC/PR alumni for AY2024-AY2026).
+    * **Masterclasses & Webinars:** Complimentary sessions to sharpen skills and gain insights.
+        * **Link:** `https://scale.nus.edu.sg/programmes/lifelonglearning/alumni`
+* **NUS Career+ App:** An AI-powered career tool for alumni (and potentially current students if linked).
+    * **Features:** Personalised skills profile, identification of skills gaps, learning/job recommendations, and career roadmap building.
+* **Alumni Associations (e.g., NUS Business School Alumni Association - NUSBSA):** Provide various benefits and networking opportunities.
+    * **Benefits:** Access to career resources, early bird invitations for networking and social events, exclusive discounts, and professional development programs.
+    * **Membership:** Student membership options are often available, providing early access to the alumni network's resources.
+        * **Link (NUSBSA Membership):** `https://nusbsa.org/membership`
+* **Mentorship & Networking:** The extensive alumni network provides valuable mentorship opportunities and avenues for professional networking, which current students can tap into through university-organized events or direct connections.
+
+---
+
+### Sources Used in this Report:
+
+This comprehensive guide is built upon information primarily sourced from official National University of Singapore websites, ensuring accuracy and up-to-date details. The previous Reddit discussions primarily informed the common questions, while official NUS portals provided the factual answers for all sections.
+
+**Official NUS Websites:**
+
+* **IT Services:**
+    * `https://nusit.nus.edu.sg/itcare/` (IT Care main page)
+    * `https://nusit.nus.edu.sg/support/eguides/nusmail-eguides/mobilemail-2/` (NUSmail Mobile Setup)
+    * `https://nusit.nus.edu.sg/services/software_and_os/software/software-for-student/` (Software for Students)
+    * `https://ctlt.nus.edu.sg/service-desk-guides` (Service Desk Guides - CTLT)
+* **Academic Policies & Registrar's Office:**
+    * `https://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/special-programmes/double-major-programmes` (Double Major Programmes)
+    * `https://www.nus.edu.sg/registrar/administrative-policies-procedures/undergraduate` (Undergraduate Administrative Policies)
+    * `https://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements` (Continuation and Graduation Requirements)
+    * `https://www.science.nus.edu.sg/undergraduates/general-academic-requirements-and-policies/` (General Academic Requirements - FoS example)
+* **Undergraduate Research:**
+    * `https://www.nus.edu.sg/undergraduate-research/nusurop/urop-across-faculties/` (UROP Multiverse)
+    * `https://www.nus.edu.sg/undergraduate-research/nusurop/what-is-rex/` (What is REx?)
+    * `https://acsnus.wixsite.com/nusacssc/research-opportunities` (Research Opportunities in Chemistry, specific examples of UROPS/URAPS)
+* **Financial Matters & Scholarships:**
+    * `https://www.nus.edu.sg/finance/students/student-finance-matters.html` (Student Finance Matters)
+    * `https://www.nus.edu.sg/oam/scholarships/scholarships-for-current-nus-undergraduates` (Scholarships for Current Undergraduates)
+* **Alumni & Lifelong Learning:**
+    * `https://scale.nus.edu.sg/programmes/lifelonglearning/alumni` (NUS Lifelong Learning for Alumni)
+    * `https://nusbsa.org/membership` (NUS Business School Alumni Association Membership)
+* **Student Support & Campus Life (from previous report, re-listed for completeness):**
+    * `https://osa.nus.edu.sg/wellness/nus-student-support-directory/`
+    * `https://www.science.nus.edu.sg/student-life-and-services/wellness-academic-financial-support/student-academic-support/`
+    * `https://nusglobalstudiesclub.wordpress.com/student-support/`
+    * `https://osa.nus.edu.sg/`
+    * `https://nus.edu.sg/cfg/students/career-ready/nusone`
+    * `https://nus.edu.sg/cfg/students/postgraduate/planning-your-postgraduate-career`
+    * `https://nus.edu.sg/cfg/`
+    * `https://nus.edu.sg/cfg/students`
+    * `https://www.nus.edu.sg/nusone/wp-content/uploads/NUSOne-First-Year-Guide-Final.pdf`
+    * `https://uci.nus.edu.sg/campus-life/housing-services/student-housing/facilities-and-amenities/`
+    * `https://uci.nus.edu.sg/campus-life/housing-services/general-information-for-student-housing/facilities-amenities/`
+    * `https://uci.nus.edu.sg/campus-life/campus-services/utown/`
+    * `https://uci.nus.edu.sg/campus-life/campus-services/`
+    * `https://www.nus.edu.sg/hwb/resource/students/`
+    * `https://osa.nus.edu.sg/wp-content/uploads/2025/03/nus-osa-student-wellbeing-pulse-2024-digital-single-page-updated-1-4.pdf`
+    * `https://www.nus.edu.sg/osa/utr/residential-life/student-wellbeing`
+    * `https://osa.nus.edu.sg/wellness/wellness-initiatives/`
+
+This comprehensive list should cover a vast array of information highly relevant to all students at NUS.
