@@ -1,6 +1,6 @@
 {
   "name": "NUS Sparks: Your NUS Onboarding Guide",
-  "description": "Your AI-powered NUS companion featuring a Housing Sorting Hat, Flashcards, Quizzes, GPA Calculator, and Exchange Planner.",
+  "description": "Your essential companion for navigating academic life at NUS. Get specific and terse flashcards and quizzes on NUS programs, policies, and student life to help you succeed as a freshman. Powered by Gemini API.",
   "requestFramePermissions": [],
   "prompt": ""
 }
